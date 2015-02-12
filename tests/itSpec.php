@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__ . '/bootstrap.php';
-
 describe('it', function () {
     it('outputs the definition', function () {
         ob_start();

@@ -1,8 +1,11 @@
 <?php
 namespace PSpec;
 
-require_once __DIR__ . '/Expectation.php';
-
+/**
+ * Class PSpec
+ *
+ * @package PSpec
+ */
 class PSpec
 {
     /** @type Expectation[] */
@@ -21,7 +24,8 @@ class PSpec
         foreach (self::$expectations as $matcher) {
             if (!$matcher->validate()) {
                 echo " failed :(\n";
-                echo $matcher->getErrorMessage();
+                echo $matcher->getErrorMessage() . "\n";
+                self::$expectations = [];
                 return;
             }
         }

@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/PSpec.php';
 
 function describe($description, $callback)
 {
