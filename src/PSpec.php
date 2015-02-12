@@ -31,7 +31,7 @@ class PSpec
 
     public static function expect($actual)
     {
-        $matcher                   = new Expectation($actual);
+        $matcher              = new Expectation($actual);
         self::$expectations[] = $matcher;
         return $matcher;
     }
